@@ -4,4 +4,4 @@ services:
 
 script:
   - docker build -t stepheninglis/node .
-  - docker image stepheninglis/node
+  - docker images stepheninglis/node
