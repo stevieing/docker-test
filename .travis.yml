@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t stepheninglis/node .
   - docker images stepheninglis/node
+
+before_deploy:
+  - docker login -u stepheninglis -p JjxfRVnXHZ2i3FC
+
+  deploy:
+    provider: script
+    script: docker push stepheninglis/node
+    on:
+      branch: master
